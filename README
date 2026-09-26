@@ -1,4 +1,4 @@
-```md
+
 - [x] Uses the organized folder structure.
 - [x] Has separate routes, controllers, and validation.
 - [x] Can list all tasks.
