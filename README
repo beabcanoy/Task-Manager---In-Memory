@@ -1,13 +1,13 @@
-```md
-- [x] Uses the organized folder structure.
-- [x] Has separate routes, controllers, and validation.
-- [x] Can list all tasks.
-- [x] Can find one task.
-- [x] Can create a task.
-- [x] Can update a task.
-- [x] Can delete a task.
-- [x] Validates new tasks.
-- [x] Validates task updates.
-- [x] Supports completion filtering.
-- [x] Supports priority filtering.
-- [x] Returns correct status codes.
+
+- [ x ] Uses the organized folder structure.
+- [ x ] Has separate routes, controllers, and validation.
+- [ x ] Can list all tasks.
+- [ x ] Can find one task.
+- [ x ] Can create a task.
+- [ x ] Can update a task.
+- [ x ] Can delete a task.
+- [ x ] Validates new tasks.
+- [ x ] Validates task updates.
+- [ x ] Supports completion filtering.
+- [ x ] Supports priority filtering.
+- [ x ] Returns correct status codes.
