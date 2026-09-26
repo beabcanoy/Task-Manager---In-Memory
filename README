@@ -1,10 +1,10 @@
 
-- [ x ] Uses the organized folder structure.
-- [ x ] Has separate routes, controllers, and validation.
-- [ x ] Can list all tasks.
-- [ x ] Can find one task.
-- [ x ] Can create a task.
-- [ x ] Can update a task.
+- [ :white_check_mark: ] Uses the organized folder structure.
+- [ :white_check_mark: ] Has separate routes, controllers, and validation.
+- [ :white_check_mark: ] Can list all tasks.
+- [ :white_check_mark: ] Can find one task.
+- [ :white_check_mark: ] Can create a task.
+- [ :white_check_mark: ] Can update a task.
 - [ x ] Can delete a task.
 - [ x ] Validates new tasks.
 - [ x ] Validates task updates.
