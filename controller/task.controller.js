@@ -78,7 +78,7 @@ export const createTask = (req, res) => {
     };
 };
 
-export const updateTask = (req, res) => {
+export const replaceTask = (req, res) => {
     try {
         const { id } = req.params;
         const { title, description, completed, priority } = req.body;
@@ -107,6 +107,43 @@ export const updateTask = (req, res) => {
             message: "Error updating task"
         });
     }
+};
+
+export const updateTask = (req, res) => {
+    try {
+        const { id } = req.params;
+        const { title, description, completed, priority } = req.body;
+        const task = tasks.find(task => task.id === Number(id));
+
+        if (!task) {
+            return res.status(404).json({
+                success: false,
+                message: "Task not found"
+            });
+        }
+
+        if (title !== undefined) {
+            task.title = title;
+        }
+        if (description !== undefined) {
+            task.description = description;
+        }
+        if (completed !== undefined) {
+            task.completed = completed;
+        }
+        if (priority !== undefined) {
+            task.priority = priority;
+        }
+
+        return res.status(200).json({
+            success: true,
+            message: "Task updated successfully",
+            data: task
+        });
+        
+    } catch (error) {
+
+    };
 };
 
 export const deleteTask = (req, res) => {
