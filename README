@@ -6,8 +6,8 @@
 - [ :white_check_mark: ] Can create a task.
 - [ :white_check_mark: ] Can update a task.
 - [ :white_check_mark: ] Can delete a task.
-- [ x ] Validates new tasks.
-- [ x ] Validates task updates.
+- [ :white_check_mark: ] Validates new tasks.
+- [ :white_check_mark: ] Validates task updates.
 - [ :white_check_mark: ] Supports completion filtering.
 - [ :white_check_mark: ] Supports priority filtering.
 - [ :white_check_mark: ] Returns correct status codes.
