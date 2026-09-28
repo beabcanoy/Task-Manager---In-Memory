@@ -25,13 +25,40 @@ export const validateCreateTask = (req, res, next) => {
     next();
 };
 
-export const validateUpdateTask = (req, res, next) => {
+export const validatePatchTask = (req, res, next) => {
     const { title, description } = req.body;
 
     if (title === undefined && description === undefined) {
         return res.status(400).json({
             success: false,
             message: "At least one of title or description must be provided"
+        });
+    }
+
+    next();
+};
+
+export const validatePutTask = (req, res, next) => {
+    const { title, description, completed, priority } = req.body;
+
+    if (!title || !description || !priority) {
+        return res.status(400).json({
+            success: false,
+            message: "Title, description, completed, and priority are required"
+        });
+    }
+
+    if (completed !== undefined && typeof completed !== "boolean") {
+        return res.status(400).json({
+            success: false,
+            message: "Completed must be a boolean"
+        });
+    }
+
+    if (priority !== undefined && !["low", "medium", "high"].includes(priority)) {
+        return res.status(400).json({
+            success: false,
+            message: "Priority must be one of 'low', 'medium', or 'high'"
         });
     }
 
