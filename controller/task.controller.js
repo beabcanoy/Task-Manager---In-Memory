@@ -142,7 +142,10 @@ export const updateTask = (req, res) => {
         });
         
     } catch (error) {
-
+        return res.status(500).json({
+            success: false,
+            message: "Error updating task"
+        });
     };
 };
 
@@ -160,7 +163,7 @@ export const deleteTask = (req, res) => {
 
         tasks.splice(task, 1);
 
-        return res.status(200).json({
+        return res.status(204).json({
             success: true,
             message: "Task deleted successfully"
         });
