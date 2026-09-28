@@ -1,6 +1,6 @@
 import { tasks } from "../data/tasks.js";
 
-export const getAllTasks = async (req, res) => {
+export const getAllTasks = (req, res) => {
     try {
         const { completed, priority } = req.query;
         let result = tasks;
